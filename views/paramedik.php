@@ -76,7 +76,7 @@ if (isset($_POST['type'])) {
 <div class="container mt-4">
   <div class="card shadow-sm">
     <div class="card-header card-header-custom d-flex justify-content-between align-items-center">
-      <span><i class="fas mr-2 fa-tags me-2"></i>Data Paramedik</span>
+      <span><i class="fas mr-2 fa-user-md me-2"></i>Data Paramedik</span>
     </div>
     <div class="card-body">
       

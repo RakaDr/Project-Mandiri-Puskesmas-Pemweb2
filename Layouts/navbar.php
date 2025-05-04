@@ -263,6 +263,12 @@ $activeUrl = $_GET['url'] ?? ''; // Get the current URL parameter or default to 
                 <!-- Add icons to the links using the .nav-icon class -->
                 <li class="nav-header">LIST MENU</li>
                 <li class="nav-item">
+                    <a href="./?url=dashboard" class="nav-link <?php echo $activeUrl === 'dashboard' ? 'active' : ''; ?>">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="./?url=periksa" class="nav-link <?php echo $activeUrl === 'periksa' ? 'active' : ''; ?>">
                         <i class="nav-icon fas fa-notes-medical"></i> <!-- Icon for Periksa -->
                         <p>Periksa</p>
