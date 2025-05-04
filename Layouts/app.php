@@ -19,7 +19,8 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0"><?= $title ?></h1>
+                            <!-- <h1><?= $title ?></h1> -->
+
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -79,8 +80,7 @@
     <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard.js"></script>
+    <script src="dist/js/adminlte.min.js"></script>
 
     <!-- DataTables  & Plugins -->
     <script src="plugins/datatables/jquery.dataTables.min.js"></script>
@@ -117,6 +117,13 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function() {
+            $('[data-widget="pushmenu"]').PushMenu(); // manual trigger (jarang perlu)
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+
 </body>
 
 </html>

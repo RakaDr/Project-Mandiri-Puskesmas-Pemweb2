@@ -2,67 +2,97 @@
 $activeUrl = $_GET['url'] ?? ''; // Get the current URL parameter or default to 'home'
 ?>
 <style>
-  /* Navbar Styling */
-  .main-header.navbar {
-    background-color: #17a2b8 !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
+    /* Navbar Styling */
+    .main-header.navbar {
+        background-color: #2e8b57 !important;
+        /* SeaGreen - lebih soft dan profesional */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
 
-  .main-header .nav-link {
-    color: white !important;
-    font-weight: 500;
-  }
+    .main-header .nav-link {
+        color: white !important;
+        font-weight: 500;
+    }
 
-  .main-header .nav-link:hover {
-    color: #d4f1f9 !important;
-  }
+    .main-header .nav-link:hover {
+        color: #d4f8d4 !important;
+    }
 
-  .navbar-badge {
-    font-size: 0.7rem;
-    top: 4px;
-  }
+    .navbar-badge {
+        font-size: 0.7rem;
+        top: 4px;
+    }
 
-  /* Sidebar Styling */
-  .main-sidebar {
-    background-color: #138496 !important;
-  }
+    /* Sidebar Styling */
+    .main-sidebar {
+        background-color: #3cb371 !important;
+        /* MediumSeaGreen */
+    }
 
-  .brand-link {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
+    .brand-link {
+        background-color: #2e8b57 !important;
+        color: white !important;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-  .user-panel .info span {
-    color: white;
-    font-weight: bold;
-  }
+    .user-panel .info span {
+        color: white;
+        font-weight: bold;
+    }
 
-  .nav-sidebar .nav-item > .nav-link {
-    color: #e0f7fb;
-    transition: background-color 0.2s ease;
-  }
+    .nav-sidebar .nav-item>.nav-link {
+        color: #eafaf1;
+        transition: background-color 0.2s ease;
+        font-weight: 500;
+    }
 
-  .nav-sidebar .nav-link.active {
-    background-color: #17a2b8;
-    color: white;
-    font-weight: bold;
-  }
+    .nav-sidebar .nav-link.active {
+        background-color: #2e8b57;
+        color: white;
+        font-weight: bold;
+    }
 
-  .nav-sidebar .nav-link:hover {
-    background-color: #1bb3cc;
-    color: white;
-  }
+    .nav-sidebar .nav-link.active {
+        background-color: #2e8b57 !important;
+        color: white !important;
+        font-weight: bold !important;
+    }
 
-  .nav-icon {
-    color: white;
-  }
+    .nav-icon {
+        color: white;
+    }
 
-  .nav-header {
-    font-size: 0.9rem;
-    color: #ffffffb3;
-    margin-top: 8px;
-    letter-spacing: 1px;
-  }
+    .nav-header {
+        font-size: 0.9rem;
+        color: #e2f2e2;
+        margin-top: 8px;
+        letter-spacing: 1px;
+    }
+
+    .dropdown-menu {
+        border-radius: 0.5rem;
+    }
+
+    .dropdown-item:hover {
+        background-color: #d1f5db;
+        color: #2e8b57;
+    }
+
+    /* Optional: Better search input look */
+    .form-control-navbar {
+        border-radius: 20px;
+        padding-left: 10px;
+    }
+
+    .sidebar-dark-primary .nav-sidebar .nav-item>.nav-link.active {
+        background-color: #2e8b57 !important;
+        color: #fff !important;
+    }
 </style>
+
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
@@ -206,9 +236,12 @@ $activeUrl = $_GET['url'] ?? ''; // Get the current URL parameter or default to 
     <!-- Brand Logo -->
 
     <!-- Brand Logo -->
-        <a href="#" class="brand-link d-flex justify-content-center align-items-center">
-            <span class="brand-text font-weight-light">Project Mandiri Rkdr</span>
-        </a>
+    <a href="#" class="brand-link d-flex justify-content-center align-items-center">
+        <span class="brand-text font-weight-bold text-white" style="font-size: 1.25rem; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);">
+            <i class="fas fa-stethoscope mr-2"></i>Puskesmas RKDR
+        </span>
+    </a>
+
 
 
     <!-- Sidebar -->
@@ -254,7 +287,7 @@ $activeUrl = $_GET['url'] ?? ''; // Get the current URL parameter or default to 
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./?url=unit" class="nav-link <?php echo $activeUrl === 'unitkerja' ? 'active' : ''; ?>">
+                    <a href="./?url=unit" class="nav-link <?php echo $activeUrl === 'unit' ? 'active' : ''; ?>">
                         <i class="nav-icon fas fa-building"></i>
                         <p>Unit Kerja</p>
                     </a>

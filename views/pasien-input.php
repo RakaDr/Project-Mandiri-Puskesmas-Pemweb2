@@ -21,6 +21,46 @@ if (isset($_POST['type'])) {
   }
 }
 ?>
+<style>
+  .card-header-info {
+    background-color: #2e8b57; /* SeaGreen */
+    color: white;
+    font-weight: bold;
+  }
+
+  .btn-info-custom {
+    background-color: #3cb371; /* MediumSeaGreen */
+    color: white;
+    border: none;
+  }
+
+  .btn-info-custom:hover {
+    background-color: #4ac98d; /* Light green hover */
+  }
+
+  .form-control:focus {
+    border-color: #2e8b57;
+    box-shadow: 0 0 0 0.2rem rgba(46, 139, 87, 0.25); /* soft green glow */
+  }
+
+  .form-label {
+    font-weight: 500;
+    color: #2e8b57;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .custom-select:focus {
+    border-color: #2e8b57;
+    box-shadow: 0 0 0 0.2rem rgba(46, 139, 87, 0.25);
+  }
+
+  .form-control, .custom-select {
+    border-radius: 0.375rem;
+  }
+</style>
 
 <div class="container">
   <form method="post">
@@ -78,7 +118,9 @@ if (isset($_POST['type'])) {
       <div class="card-footer text-right">
         <input type="hidden" name="type" value="<?= $pasien_id ? 'update' : 'create' ?>">
         <input type="hidden" name="id" value="<?= $pasien_id ?>">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-info-custom">
+          <i class="fas fa-save me-1"></i> Submit
+        </button>
       </div>
     </div>
 
